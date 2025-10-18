@@ -60,7 +60,7 @@ begin
                 remainder_reg <= (others => '0');
                 quotient_reg <= (others => '0');
                 dinl_reg <= (others => '0');
-                if divisor = (others => '0') then
+                if divisor = (DIVISOR_WIDTH - 1 downto 0 => '0') then
                     overflow_reg <= '1';
                     end_state <= '1';
                 end if;
