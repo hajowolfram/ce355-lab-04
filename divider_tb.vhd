@@ -5,7 +5,6 @@ library STD;
 use STD.textio.all;
 
 use WORK.divider_const.all;
-for all : divider use entity WORK.divider (behavioral_sequential);
 
 entity divider_tb is
 end entity divider_tb;
@@ -33,6 +32,7 @@ architecture UsingTextFiles of divider_tb is
             overflow : out std_logic
         );
     end component divider;
+    for all : divider use entity WORK.divider (behavioral_sequential);
     begin
     
     dut: divider 
